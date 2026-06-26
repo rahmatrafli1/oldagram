@@ -1,5 +1,225 @@
-html, body {
-    margin: 0;
-    padding: 0;
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Source Sans 3", sans-serif;
+  background-color: #fafafa;
+  color: #262626;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  max-width: 470px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ===== LOGO - Pacifico ===== */
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #262626;
+  font-style: normal;
+  letter-spacing: -0.5px;
+}
+
+.header-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dbdbdb;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.header-avatar:hover {
+  border-color: #c13584;
+}
+
+/* ===== FEED ===== */
+.feed {
+  max-width: 470px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ===== POST CARD ===== */
+.post {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  margin: 16px 0;
+  overflow: hidden;
+}
+
+/* ===== POST HEADER ===== */
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 12px;
+}
+
+.post-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)
+      border-box;
+  cursor: pointer;
+}
+
+.post-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-username {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #262626;
+}
+
+.post-location {
+  font-size: 0.78rem;
+  color: #8e8e8e;
+}
+
+/* ===== POST IMAGE ===== */
+.post-image-wrapper {
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.post-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.post-image:hover {
+  transform: scale(1.01);
+}
+
+/* ===== POST ACTIONS ===== */
+.post-actions {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 16px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  color: #262626;
+  transition:
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.action-btn i {
+  font-size: 1.5rem;
+}
+
+/* ===== HOVER EFFECTS ON ICONS ===== */
+.action-btn.like-btn:hover {
+  color: #ed4956;
+  transform: scale(1.15);
+}
+
+.action-btn.comment-btn:hover {
+  color: #0095f6;
+  transform: scale(1.15);
+}
+
+.action-btn.share-btn:hover {
+  color: #5851db;
+  transform: scale(1.15);
+}
+
+/* Active liked state */
+.action-btn.like-btn.liked {
+  color: #ed4956;
+}
+
+/* ===== POST LIKES ===== */
+.post-likes {
+  padding: 0 16px 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #262626;
+}
+
+/* ===== POST CAPTION ===== */
+.post-caption {
+  padding: 0 16px 14px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #262626;
+}
+
+.post-caption strong {
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+/* ===== HEART POP ANIMATION ===== */
+@keyframes heartPop {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 470px) {
+  .header {
+    padding: 10px 14px;
+  }
+
+  .feed {
+    margin: 0;
+  }
+
+  .post {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin: 8px 0;
+  }
+}

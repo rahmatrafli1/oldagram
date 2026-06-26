@@ -1,9 +1,43 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <img src="images/logo.png">
-        <script src="index.js"></script>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oldagram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Source Sans 3 + Pacifico untuk logo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="logo">Oldagram</h1>
+      <div class="header-profile">
+        <img
+          src="images/user-avatar.png"
+          alt="My Profile"
+          class="header-avatar"
+          onerror="
+            this.src = 'https://placehold.co/40x40/dbdbdb/8e8e8e?text=Me'
+          "
+        />
+      </div>
+    </header>
+
+    <!-- MAIN FEED -->
+    <main class="feed" id="feed">
+      <!-- Posts will be rendered by JavaScript -->
+    </main>
+
+    <script src="index.js"></script>
+  </body>
 </html>
